@@ -1,9 +1,0 @@
-[10-Jul-2017 16:02:59 UTC] PHP Fatal error:  Call to a member function RegisterUser() on null in /home/npixelw3projects/public_html/vinay/music/application/controllers/Home.php on line 49
-[11-Jul-2017 20:23:55 UTC] PHP Fatal error:  Call to a member function result() on boolean in /home/npixelw3projects/public_html/vinay/music/application/views/admin/certilescore.php on line 56
-[11-Jul-2017 20:25:35 UTC] PHP Fatal error:  Call to a member function result() on boolean in /home/npixelw3projects/public_html/vinay/music/application/views/admin/certilescore.php on line 56
-[13-Jul-2017 08:37:46 UTC] PHP Fatal error:  Call to a member function row() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 16
-[13-Jul-2017 08:40:56 UTC] PHP Fatal error:  Call to a member function row() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
-[13-Jul-2017 08:41:33 UTC] PHP Fatal error:  Call to a member function row() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
-[13-Jul-2017 08:41:37 UTC] PHP Fatal error:  Call to a member function row() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
-[13-Jul-2017 08:41:39 UTC] PHP Fatal error:  Call to a member function row() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
-[13-Jul-2017 08:43:11 UTC] PHP Fatal error:  Call to a member function result_array() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
