@@ -1,0 +1,7 @@
+html, body{height: 100%; background:#fff;}
+.color-white{color:#fff;}
+.adminDashboardView{margin:70px 10px 0px;}
+.adminDashboardView td > table{margin:0 0 5px 0;}
+.testupload-data-view{padding:20px 0;}
+.testupload-data-view a{text-decoration:underline;}
+.testupload-data-view a:hover{text-decoration:none;}
