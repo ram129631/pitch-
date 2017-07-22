@@ -7,8 +7,10 @@ class Home extends CI_Controller {
 	 * Develope on 19th July'2016 by Hemanth Kumar
 	 * Modified on 24th.
 	 */ 
-
-	public function index()
+        public function __construct() {
+            parent::__construct();
+        }
+        public function index()
 	{
 		/**
 		* Checking the session and redirecting to respective pages
@@ -38,8 +40,43 @@ class Home extends CI_Controller {
 		
 		redirect('/', 'refresh');
 	}
+        
+        public function registerpage(){
+            /**
+		* Checking the session and redirecting to respective pages
+		*/
+		if(isset($this->session->userdata['UserID']))
+		{
+			redirect('/welcome', 'refresh');
+		}else
+		{
+			$arrData['Title'] = 'AIMs - Tonal Memory Registration Form';
 
-	public function register()
+			$Header = $this->load->view('header', $arrData, true);
+
+			$arrData['Header'] = $Header;
+
+			$arrData['Footer'] = $this->load->view('footer', $arrData, true);
+
+			$this->load->view('home_1', $arrData);
+		}
+        }
+
+        
+
+        public function checkuser(){
+           $this->load->model('register_model');
+           $filename = $this->input->post('filenumber');
+           $ret_val = $this->register_model->check_user($filename);
+           if($ret_val == 1){
+               redirect('welcome');
+           }elseif($ret_val == 0){
+               redirect('home/registerpage');
+           }
+           
+        }
+
+        public function register()
 	{
 		/* Load the database model:
       	/application/models/Register.php */

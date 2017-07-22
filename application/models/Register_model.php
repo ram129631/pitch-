@@ -12,7 +12,7 @@ class Register_model extends CI_Model
 	
 	function RegisterUser()
 	{
-		if(sizeof($_POST) > 0)
+		if(sizeof($_POST) >= 2)
 		{
 			$arrUserData = array
 			(
@@ -42,5 +42,21 @@ class Register_model extends CI_Model
 			}
 		}
 	}
+        
+        public function check_user($filename){
+             $query = $this->db->query("select * from aims_users where filenumber='$filename'");
+             if($query->num_rows() == 1){
+                 $info = $query->row();
+                $this->session->set_userdata("UserName", $info->firstname);
+                $this->session->set_userdata("LastName", $info->lastname);
+                $this->session->set_userdata("Gender", $info->gender);
+                $this->session->set_userdata("UserID", $info->id);
+                 return 1;
+             }else if($query->num_rows() < 1){
+                
+                 
+                 return 0;
+             }
+        }
 }
 ?>
