@@ -7,3 +7,6 @@
 [13-Jul-2017 08:41:37 UTC] PHP Fatal error:  Call to a member function row() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
 [13-Jul-2017 08:41:39 UTC] PHP Fatal error:  Call to a member function row() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
 [13-Jul-2017 08:43:11 UTC] PHP Fatal error:  Call to a member function result_array() on boolean in /home/npixelw3projects/public_html/vinay/music/application/helpers/basic_helper.php on line 17
+[28-Jul-2017 13:05:31 UTC] PHP Fatal error:  Call to undefined function isselected() in /home/npixelw3projects/public_html/vinay/music/application/views/common/navigation.php on line 9
+[28-Jul-2017 13:06:01 UTC] PHP Fatal error:  Call to undefined function isselected() in /home/npixelw3projects/public_html/vinay/music/application/views/common/navigation.php on line 9
+[28-Jul-2017 13:06:05 UTC] PHP Fatal error:  Call to undefined function isselected() in /home/npixelw3projects/public_html/vinay/music/application/views/common/navigation.php on line 9

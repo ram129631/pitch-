@@ -27,48 +27,48 @@
 			<?php $this->load->view('admin/navigation'); ?>
 			<!-- Header ends here -->
 			<!-- Body Content goes here -->
-				<section class="adminDashboardView">
-					<div class="UserListView container">
-							<div class="row text-center" style="margin:10px;padding:5px;" >
-								<input type="text" name="search_query" placeholder="Search Query" id="sleSearchQuery" style="padding:5px 10px; float:right;" />
-							</div>
-							<div>
-								<a id="btnExport" class="btn btn-primary pull-right col-md-1 col-sm-1" target="_blank" href="<?=base_url();?>userslist/export" style="width:150px; min-width:inherit; margin-right:15px;"> Export </a>
-							</div>
-							<table width="100%" id="tblCustomerList" cellspacing="0" cellpadding="0" class="table table-bordered">
-								<thead>
-								<tr>
-									<!--th width="20%">First Name</th>
-									<th width="20%">Last Name</th-->
-									<th width="15%">Age</th>
-									<th width="15%">Gender</th>
-									<th width="15%">File Number</th>
-									<th width="15%">Joined Date</th>
-									<th width="10%">Score</th>
-									<th width="10%">Certile</th>
-								</tr>
-								</thead>
-								<tbody>
-									<?php
-										foreach($Users as $user){
-									?>
-										<tr>
-											<!--td><?=$user['firstname'];?></td>
-											<td><?=$user['lastname'];?></td-->
-											<td><?=$user['age'];?></td>
-											<td><?=$user['gender'];?></td>
-											<td><?=$user['filenumber'];?></td>
-											<td><?=$user['addeddate'];?></td>
-											<td><?=$user['score'];?></td>
-											<td><?=$user['certile'];?></td>
-										</tr>
-									<?php
-										}
-									?>
-								</tbody>
-							</table>
-					</div>
-				</section>
+                        <section class="adminDashboardView">
+                            <div class="UserListView container">
+                                <div class="row text-center" style="margin:10px;padding:5px;" >
+                                        <input type="text" name="search_query" placeholder="Search Query" id="sleSearchQuery" style="padding:5px 10px; float:right;" />
+                                </div>
+                                <div>
+                                        <a id="btnExport" class="btn btn-primary pull-right col-md-1 col-sm-1" target="_blank" href="<?=base_url();?>userslist/export" style="width:150px; min-width:inherit; margin-right:15px;"> Export </a>
+                                </div>
+                                <table width="100%" id="tblCustomerList" cellspacing="0" cellpadding="0" class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <!--th width="20%">First Name</th>
+                                            <th width="20%">Last Name</th-->
+                                            <th width="15%">Age</th>
+                                            <th width="15%">Gender</th>
+                                            <th width="15%">File Number</th>
+                                            <th width="15%">Joined Date</th>
+                                            <th width="10%">Score</th>
+                                            <th width="10%">Certile</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                <?php
+                                                        foreach($Users as $user){
+                                                ?>
+                                                <tr>
+                                                    <!--td><?=$user['firstname'];?></td>
+                                                    <td><?=$user['lastname'];?></td-->
+                                                    <td><?=$user['age'];?></td>
+                                                    <td><?=$user['gender'];?></td>
+                                                    <td><?=$user['filenumber'];?></td>
+                                                    <td><?=$user['addeddate'];?></td>
+                                                    <td><?=$user['score'];?></td>
+                                                    <td><?=$user['certile'];?></td>
+                                                </tr>
+                                                <?php
+                                                        }
+                                                ?>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </section>
 			<!-- Body Content ends here -->
 		<!-- Admin Dashboard ends here -->
 		

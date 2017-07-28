@@ -77,11 +77,11 @@ class Admin_model extends CI_Model
 		{
 			$strQuestionCode = $_POST['questioncode'];
 
-			$strOptionsCount = $_POST['optionscount'];
+			//$strOptionsCount = $_POST['optionscount'];
 
-			$strQuestionLevel = $_POST['questionlevel'];
+			//$strQuestionLevel = $_POST['questionlevel'];
 
-			$strOptionColor = $_POST['optioncolor'];
+			//$strOptionColor = $_POST['optioncolor'];
 
 			$target_file1 = false;
 
@@ -122,9 +122,9 @@ class Admin_model extends CI_Model
 				{
 					$arrData = array(
 						'questioncode'  => $strQuestionCode, 
-						'optionscount'  => $strOptionsCount,
-						'optioncolor' 	=> $strOptionColor,
-						'questionlevel' => $strQuestionLevel,
+						//'optionscount'  => $strOptionsCount,
+						//'optioncolor' 	=> $strOptionColor,
+						//'questionlevel' => $strQuestionLevel,
 						'addeddate'	    => date('Y-m-d H:m:s'),
 						'audiopath'		=> $target_file1,
 						'audiofilename' => $strNewFileName,
@@ -134,9 +134,9 @@ class Admin_model extends CI_Model
 				{
 					$arrData = array(
 						'questioncode'  => $strQuestionCode, 
-						'optionscount'  => $strOptionsCount,
-						'optioncolor' 	=> $strOptionColor,
-						'questionlevel' => $strQuestionLevel,
+						//'optionscount'  => $strOptionsCount,
+						//'optioncolor' 	=> $strOptionColor,
+						//'questionlevel' => $strQuestionLevel,
 						'answer' 		=> $_POST['answer']
 					);
 				}

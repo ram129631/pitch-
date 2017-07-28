@@ -30,5 +30,11 @@ function get_certile_age_gender($ages,$gender,$score){
     
     
 }
-
+function isselected($url){
+    $CI = &get_instance();
+    //echo current_url();
+    if(current_url() == "$url"){
+        return 'bg-success';
+    }
+}
 ?>
