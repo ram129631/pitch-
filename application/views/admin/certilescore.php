@@ -65,17 +65,7 @@
 							</table>
 					</div>
 				</section>
-                        <p>age -58 gender - male score 59</p>
-                        <?php echo get_certile_age_gender('58', 'male', '59')?>
-                        <p>age -68 gender - male score 59</p>
-                        <?php echo get_certile_age_gender('68', 'male', '59')?>
-                        <p>age -15 gender - male score 59</p>
-                        <?php echo get_certile_age_gender('15', 'male', '59')?>
-                        <p>age -17 gender - male score 59</p>
-                        <?php echo get_certile_age_gender('17', 'male', '59')?>
-                        <p>age -19 gender - male score 59</p>
-                        <?php echo get_certile_age_gender('19', 'male', '59')?>
-			<!-- Body Content ends here -->
+             			<!-- Body Content ends here -->
 		<!-- Admin Dashboard ends here -->
 		
 		<!-- JS files will load here -->
