@@ -1,6 +1,6 @@
 <?=$Header;?>
 <!-- Body content goes here -->
-<section class="intro-wrapper nextbranch-view" style="background:#f4b081 url('resources/img/ribbon.png') repeat-x;">
+<!--<section class="intro-wrapper nextbranch-view" style="background:#f4b081 url('resources/img/ribbon.png') repeat-x;">
 		<div class="container">
 			<div class="row">
 				<div class="thankyou-view">
@@ -19,7 +19,7 @@
 				</div>
             </div>
 		</div>
-</section>
+</section>-->
 <!-- Body content ends here -->
 <!-- JS files will load here -->
 <script type="text/javascript">

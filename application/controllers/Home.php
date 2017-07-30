@@ -20,7 +20,7 @@ class Home extends CI_Controller {
 			redirect('/welcome', 'refresh');
 		}else
 		{
-			$arrData['Title'] = 'AIMs - Tonal Memory Registration Form';
+			$arrData['Title'] = 'Pitch Discrimination ';
 
 			$Header = $this->load->view('header', $arrData,true);
 
@@ -50,7 +50,7 @@ class Home extends CI_Controller {
 			redirect('/welcome', 'refresh');
 		}else
 		{
-			$arrData['Title'] = 'AIMs - Tonal Memory Registration Form';
+			$arrData['Title'] = 'Pitch Discrimination ';
 
 			$Header = $this->load->view('header', $arrData, true);
 
@@ -71,6 +71,8 @@ class Home extends CI_Controller {
            if($ret_val == 1){
                redirect('welcome');
            }elseif($ret_val == 0){
+               $file_number = $this->input->post_get('filenumber');
+               $this->session->temp_filenumber = $file_number;
                redirect('home/registerpage');
            }
            

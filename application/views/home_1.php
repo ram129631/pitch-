@@ -47,7 +47,7 @@
                <div class="form-group">
                     <label for="sleFileNumber" class="col-sm-4 control-label">File Number :</label>
                     <div class="col-sm-8">
-                         <input type="text" id="sleFileNumber" placeholder="File Number" class="form-control" name="filenumber" value="103B-D-2017-" autocomplete="false" />
+                         <input type="text" id="sleFileNumber" placeholder="File Number" class="form-control" name="filenumber" value="<?php if($this->session->temp_filenumber){ echo $this->session->temp_filenumber; }else{ echo '103B-D-2017-'; }; ?>" autocomplete="false" />
                     </div>
                 </div>
                 

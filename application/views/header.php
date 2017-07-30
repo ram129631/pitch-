@@ -20,6 +20,7 @@
 	<link href="<?=base_url();?>resources/css/cssBundle.css" rel="stylesheet" />
     <!--link href="https://www.aimstesting.org/css/theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" / -->
 	<link href="<?=base_url();?>resources/css/intro.css" rel="stylesheet" />
+        <link href="<?=base_url();?>resources/css/style.css" rel="stylesheet" />
     <script src="<?=base_url();?>resources/js/modernizr-2.6.2.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript">

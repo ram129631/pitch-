@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class NewExample extends CI_Controller {
+class Newexample extends CI_Controller {
 
 	/**
 	 * This is NewExample page controller.

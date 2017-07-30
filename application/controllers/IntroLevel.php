@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class IntroLevel extends CI_Controller {
+class Introlevel extends CI_Controller {
 
 	/**
 	 * This is NewExampleInfo page controller.

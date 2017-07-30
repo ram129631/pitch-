@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class NextBranch extends CI_Controller {
+class Nextbranch extends CI_Controller {
 
 	/**
 	 * This is NextBranch page controller.

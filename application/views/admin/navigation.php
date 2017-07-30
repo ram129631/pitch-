@@ -4,7 +4,7 @@
 				  <a class="navbar-brand" href="<?php echo base_url();?>admindashboard">Dashboard</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-				  <ul class="nav navbar-nav" style="float:none;">
+				  <ul class="nav navbar-nav navbar-right" style="float:none;">
 					<li><a href="<?php echo base_url();?>userslist">Users List</a></li>
 					<li><a href="<?php echo base_url();?>usertestresult">Test Result</a></li>
 					<li><a href="<?php echo base_url();?>uploadquestions">Upload Test Item</a></li>

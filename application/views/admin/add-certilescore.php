@@ -9,7 +9,7 @@
 <head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		 <title>AIMs - Admin Dashboard</title>
+		 <title>Pitch Discrimination - Admin Panel</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -54,6 +54,19 @@
                                             </form>
 					</div>
 				</section>
+                        <div class="container">
+                        <div class="row">
+                        <hr>
+                          <div class="col-lg-12">
+                            <div class="col-md-8">
+                              <a href="#">Terms of Service</a> | <a href="#">Privacy</a>    
+                            </div>
+                            <div class="col-md-4">
+                              <p class="muted pull-right">© <?php echo date('Y'); ?> Pitch Descrimination. All rights reserved</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 			<!-- Body Content ends here -->
 		<!-- Admin Dashboard ends here -->
 		

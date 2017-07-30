@@ -53,7 +53,10 @@ $route['default_controller'] = 'home';
 
 
 //admin pages
-
+$route['userslist/'] ="userslist/1";
+$route['userslist/(:num)'] ="userslist/index/$1";
+$route['usertestresult/'] ="usertestresult/1";
+$route['usertestresult/(:num)'] ="usertestresult/index/$1";
 $route['certile-scores'] = 'certilescores/index';
 $route['add-certile-score'] = 'certilescores/add_certile_score';
 $route['add-update-certile-score'] = 'certilescores/add_update_certile_score';

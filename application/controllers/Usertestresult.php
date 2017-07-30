@@ -7,11 +7,37 @@ class Usertestresult extends CI_Controller {
 	 * This is NewExampleInfo page controller.
 	 * Develope on 19th July'2016 by Hemanth Kumar
 	 */
-	public function index()
+	public function index($num=1)
 	{
 		$this->load->model('admin_model');
-
-		$arrData['TestResults'] = $this->admin_model->FetchTestResult();
+                $this->load->library('pagination');
+                $this->load->helper('basic_helper');
+                $complaints = "select count(*) as count_val from pitch_users ";
+                $query = $this->db->query($complaints);
+                $row = $query->row();
+                $config = pag_config($row->count_val,5,site_url('usertestresult'));
+                $this->pagination->initialize($config);
+                $arrData['pagination_links'] =  $this->pagination->create_links();
+                if($num == 1){
+                     $this->session->itr = $num; 
+                    $limit = "limit 0,5";
+                }else{
+                    $this->session->itr = ($num*5-5)+1;
+                    $num *=5;
+                    $num -=5;
+                    $limit = "limit $num,5";
+                }
+                
+                $query = $this->db->query("SELECT * FROM pitch_users ORDER BY id DESC $limit");
+                $arrUsers = $query->result_array();;
+		foreach ($arrUsers as $key => &$value) {
+			$value['test_result'] = $this->admin_model->_userResults($value['id']);
+		}
+		
+		//return $arrUsers;
+                
+                
+		$arrData['TestResults'] =  $arrUsers;//$this->admin_model->FetchTestResult();
 
 		$arrData['Certiles'] = $this->admin_model->FetchCertile();
 

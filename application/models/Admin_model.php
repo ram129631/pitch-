@@ -19,7 +19,7 @@ class Admin_model extends CI_Model
 
 			$strPassword = md5($_POST['password']);
 
-			$strQuery = 'SELECT * FROM aims_employees WHERE username LIKE "'.$strUserName.'"';
+			$strQuery = 'SELECT * FROM pitch_employees WHERE username LIKE "'.$strUserName.'"';
 
 			$objQuery = $this->db->query($strQuery);
 
@@ -58,7 +58,7 @@ class Admin_model extends CI_Model
 
 	function FetchQuestions()
 	{
-		$strQuery = 'SELECT * FROM aims_questions';
+		$strQuery = 'SELECT * FROM pitch_questions';
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -143,13 +143,13 @@ class Admin_model extends CI_Model
 
 				if($_POST['id'] == -1)
 				{
-					$result = $this->db->insert('aims_questions', $arrData);
+					$result = $this->db->insert('pitch_questions', $arrData);
 				}
 				else
 				{
 					$this->db->where('id', $_POST['id']);
 
-					$result = $this->db->update('aims_questions', $arrData);
+					$result = $this->db->update('pitch_questions', $arrData);
 				}
 
 				if($result)
@@ -165,7 +165,7 @@ class Admin_model extends CI_Model
 
 	function FetchUsers()
 	{
-		$strQuery = 'SELECT * FROM aims_users ORDER BY id DESC';
+		$strQuery = 'SELECT * FROM pitch_users ORDER BY id DESC';
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -190,7 +190,7 @@ class Admin_model extends CI_Model
 
 	function FetchCertile()
 	{
-		$strQuery = 'SELECT * FROM aims_certile ORDER BY id DESC';
+		$strQuery = 'SELECT * FROM pitch_certile ORDER BY id DESC';
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -199,7 +199,7 @@ class Admin_model extends CI_Model
 
 	function FetchCertileWRT($p_intScore)
 	{
-		$strQuery = 'SELECT certile FROM aims_certile WHERE score = '.$p_intScore;
+		$strQuery = 'SELECT certile FROM pitch_certile WHERE score = '.$p_intScore;
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -229,7 +229,7 @@ class Admin_model extends CI_Model
 			else
 				$strGender = "male";
 
-			$strQuery = $this->db->get_where('aims_users',array('gender ='=>$strGender, 'age >= ' => $arrTemp[1], 'age <= ' => $arrTemp[2]));
+			$strQuery = $this->db->get_where('pitch_users',array('gender ='=>$strGender, 'age >= ' => $arrTemp[1], 'age <= ' => $arrTemp[2]));
 
 			if($strQuery->num_rows())
 			{
@@ -247,7 +247,7 @@ class Admin_model extends CI_Model
 			else
 				$strGender = "male";
 
-			$strQuery = $this->db->get_where('aims_users',array('age >= ' => $arrTemp[0], 'age <= ' => $arrTemp[1]));
+			$strQuery = $this->db->get_where('pitch_users',array('age >= ' => $arrTemp[0], 'age <= ' => $arrTemp[1]));
 
 			if($strQuery->num_rows())
 			{
@@ -265,7 +265,7 @@ class Admin_model extends CI_Model
 			else
 				$strGender = "male";
 
-			$strQuery = $this->db->get_where('aims_users',array('gender ='=>'$strGender'));
+			$strQuery = $this->db->get_where('pitch_users',array('gender ='=>'$strGender'));
 
 			if($strQuery->num_rows())
 			{
@@ -281,7 +281,7 @@ class Admin_model extends CI_Model
 	function _userResults($id_user)
 	{
 		
-		$strQuery = 'SELECT ua.`questionid`, ua.`optionid`, q.`answer`, q.includeinscoring FROM aims_user_answers ua INNER JOIN aims_questions q ON q.id = ua.`questionid` WHERE userid = '.$id_user;
+		$strQuery = 'SELECT ua.`questionid`, ua.`optionid`, q.`answer`, q.includeinscoring FROM pitch_user_answers ua INNER JOIN pitch_questions q ON q.id = ua.`questionid` WHERE userid = '.$id_user;
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -318,7 +318,7 @@ class Admin_model extends CI_Model
 
 	 		$this->db->where('id', $id);
 
-			$this->db->update('aims_questions', $arrData);
+			$this->db->update('pitch_questions', $arrData);
 		}else
 		{
 			return false;
@@ -339,7 +339,7 @@ class Admin_model extends CI_Model
 
 	 		$this->db->where('id', $id);
 
-			$this->db->update('aims_questions', $arrData);
+			$this->db->update('pitch_questions', $arrData);
 		}else
 		{
 			return false;
@@ -349,16 +349,16 @@ class Admin_model extends CI_Model
         
         public function update_certile_score($id,$ages,$gender,$score,$certile){
             
-            $this->db->query("update aims_certilescore set ages='$ages',gender='$gender',score='$score',certile='$certile' where id=$id");
+            $this->db->query("update pitch_certilescore set ages='$ages',gender='$gender',score='$score',certile='$certile' where id=$id");
             
         }
         
         public function delete_certile_score($id){
-            $this->db->query("delete from aims_certilescore where id=$id");
+            $this->db->query("delete from pitch_certilescore where id=$id");
         }
         
         public function insert_certile_score($ages,$gender,$score,$certile){
-            $this->db->query("insert into aims_certilescore(ages,gender,score,certile) values('$ages','$gender','$score','$certile')");
+            $this->db->query("insert into pitch_certilescore(ages,gender,score,certile) values('$ages','$gender','$score','$certile')");
         }
 }
 ?>

@@ -25,7 +25,7 @@ class Register_model extends CI_Model
 				'active'		=> 1,
 			);
 
-			$result = $this->db->insert('aims_users', $arrUserData);
+			$result = $this->db->insert('pitch_users', $arrUserData);
 
 			if($result)
 			{
@@ -44,7 +44,7 @@ class Register_model extends CI_Model
 	}
         
         public function check_user($filename){
-             $query = $this->db->query("select * from aims_users where filenumber='$filename'");
+             $query = $this->db->query("select * from pitch_users where filenumber='$filename'");
              if($query->num_rows() == 1){
                  $info = $query->row();
                 $this->session->set_userdata("UserName", $info->firstname);

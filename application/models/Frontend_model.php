@@ -12,7 +12,7 @@ class Frontend_model extends CI_Model
 
 	function FetchQuestions($p_Level)
 	{
-		$strQuery = 'SELECT * FROM aims_questions WHERE active = 1 AND questionlevel = '.$p_Level.'';
+		$strQuery = 'SELECT * FROM pitch_questions WHERE active = 1 AND questionlevel = '.$p_Level.'';
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -38,7 +38,7 @@ class Frontend_model extends CI_Model
 			'addeddate'	    => date('Y-m-d H:m:s'),
 		);
 
-		$result = $this->db->insert('aims_user_answers', $arrData);
+		$result = $this->db->insert('pitch_user_answers', $arrData);
 
 		return $result;
 
@@ -46,8 +46,8 @@ class Frontend_model extends CI_Model
 
 	function FetchResult()
 	{
-		$strQuery = "SELECT userid,questionid,includeinscoring, optionid, answer, IF(optionid = answer, 1,0) AS result FROM aims_user_answers ua
-			INNER JOIN aims_questions q ON q.id = ua.`questionid`
+		$strQuery = "SELECT userid,questionid,includeinscoring, optionid, answer, IF(optionid = answer, 1,0) AS result FROM pitch_user_answers ua
+			INNER JOIN pitch_questions q ON q.id = ua.`questionid`
 			WHERE userid = ".$this->session->userdata('UserID');
 			
 		$objQuery = $this->db->query($strQuery);

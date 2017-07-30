@@ -9,7 +9,7 @@
 <head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		 <title>AIMs - Admin Dashboard</title>
+		 <title>Pitch Discrimination - Admin Panel</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -61,10 +61,6 @@
 										<option value="-1"></option>
 										<option value="1">1</option>
 										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
 									</select>
 								  </div>
 								</div>								
@@ -81,9 +77,9 @@
 									<tr>
 										<th width="10%">Item No</th>
 										<th width="15%">Audio</th>
-										<th width="10%">Options Count</th>
+										<!--?<th width="10%">Options Count</th>-->
 										<th width="5%">Acual Answer</th>
-										<th width="10%">Test Level</th>
+										<!--?<th width="10%">Test Level</th>-->
 										<th width="10%">Action</th>
 										<th width="5%">Active</th>
 										<th width="5%">Includein Scoring</th>
@@ -100,9 +96,9 @@
 										<tr>
 											<td><?=$question['questioncode'];?></td>
 											<td><?=$question['audiofilename'];?></td>
-											<td><?=$question['optionscount'];?></td>
+											<!--<td><?=$question['optionscount'];?></td>-->
 											<td><?=$question['answer'];?></td>
-											<td><?=$question['questionlevel'];?></td>
+											<!--<td><?=$question['questionlevel'];?></td>-->
 											<td>
 												<a href="javascript:void(0)" class="edit" data-index="<?=$key;?>" data-questionid="<?=$question['id'];?>" id="aEditQuestion" >Edit</a> 
 												<a href="javascript:void(0)" class="delete-btn" onclick=fnDeleteQuestion("<?=$question['id'];?>", "0");>Delete</a>
@@ -122,6 +118,19 @@
 						</div>
 					</div>
 				</section>
+                        <div class="container">
+                        <div class="row">
+                        <hr>
+                          <div class="col-lg-12">
+                            <div class="col-md-8">
+                              <a href="#">Terms of Service</a> | <a href="#">Privacy</a>    
+                            </div>
+                            <div class="col-md-4">
+                              <p class="muted pull-right">© <?php echo date('Y'); ?> Pitch Descrimination. All rights reserved</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 			<!-- Body Content ends here -->
 		<!-- Admin Dashboard ends here -->
 		

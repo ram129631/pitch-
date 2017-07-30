@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class TestUpload extends CI_Controller {
+class Testupload extends CI_Controller {
 
 	/**
 	 * This is NewExampleInfo page controller.
